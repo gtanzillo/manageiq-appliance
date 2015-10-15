@@ -9,8 +9,12 @@ popd
 pushd /var/www/miq/vmdb/spa_ui/self_service
   npm install gulp bower -g
   npm install
-  bower --allow-root install
+  bower install
   gulp build
+
+  ls -ald / /root ~
+  cat ~/.bowerrc
+  cat /root/.bowerrc
 popd
 
 # httpd needs to connect to backend workers on :3000 and :4000
